@@ -1,25 +1,24 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import toast from 'react-hot-toast'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [pass, setPass] = useState('')
-  const navigate = useNavigate()
+  const [email, setEmail] = useState("admin@example.com"); // default
+  const [pass, setPass] = useState("admin123"); // default
+  const navigate = useNavigate();
 
-  const handleLogin = e => {
-    e.preventDefault()
+  const handleLogin = (e) => {
+    e.preventDefault();
 
-    // Dummy credentials
-    if (email === 'admin@example.com' && pass === 'admin123') {
-      localStorage.setItem('auth', true)
-      toast.success('Login successful! 🎉')
-      navigate('/')
+    // Dummy credentials check
+    if (email === "admin@example.com" && pass === "admin123") {
+      localStorage.setItem("auth", true);
+      toast.success("Login successful! 🎉");
+      navigate("/");
     } else {
-      alert('Invalid credentials')
-      toast.error('Invalid credentials ❌')
+      toast.error("Invalid credentials ❌");
     }
-  }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
@@ -27,13 +26,15 @@ const Login = () => {
         onSubmit={handleLogin}
         className="bg-white dark:bg-gray-800 p-8 rounded shadow w-80 space-y-4"
       >
-        <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white">Login</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white">
+          Login
+        </h2>
         <input
           type="email"
           placeholder="Email"
           className="w-full px-4 py-2 border rounded"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
@@ -41,7 +42,7 @@ const Login = () => {
           placeholder="Password"
           className="w-full px-4 py-2 border rounded"
           value={pass}
-          onChange={e => setPass(e.target.value)}
+          onChange={(e) => setPass(e.target.value)}
           required
         />
         <button
@@ -52,7 +53,7 @@ const Login = () => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

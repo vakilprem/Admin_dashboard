@@ -1,3 +1,4 @@
+import React from "react";
 // pages/Profile.jsx
 const Profile = () => {
     const user = {

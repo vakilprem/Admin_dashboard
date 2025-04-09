@@ -1,10 +1,11 @@
 // Sidebar.jsx
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Box, ShoppingCart, Users, Settings,Contact, ChartArea } from "lucide-react"; // Icon set
+import React from "react";
+import { LayoutDashboard, Box, ShoppingCart, Users, Settings,Contact, ChartArea, LayoutDashboardIcon } from "lucide-react"; // Icon set
 // import Contact from "../pages/Contact";
 
 const navItems = [
-  { name: "Dashboard", path: "/", icon: <LayoutDashboard size={20} /> },
+  { name: "Dashboard", path: "/", icon: <LayoutDashboardIcon size={20} /> },
   { name: "Products", path: "/products", icon: <Box size={20} /> },
   { name: "Orders", path: "/orders", icon: <ShoppingCart size={20} /> },
   { name: "Customers", path: "/customers", icon: <Users size={20} /> },

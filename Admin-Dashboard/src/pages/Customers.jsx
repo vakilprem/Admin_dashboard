@@ -1,3 +1,4 @@
+import React from "react";
 const Customers = () => {
     const customers = [
       { id: 1, name: 'Alice', email: 'alice@example.com' },

@@ -1,3 +1,4 @@
+import React from "react";
 // src/components/ProductDetailsModal.jsx
 const ProductDetailsModal = ({ product, onClose }) => {
     if (!product) return null;

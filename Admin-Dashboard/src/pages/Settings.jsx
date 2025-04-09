@@ -1,3 +1,4 @@
+import React from "react";
 // pages/Settings.jsx
 const Settings = () => {
     return (

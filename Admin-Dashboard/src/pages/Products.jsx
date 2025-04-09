@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useMemo, useCallback, lazy, Suspense } from "react";
 import ProductRow from "./ProductRow"; // keep using React.memo on this one
 

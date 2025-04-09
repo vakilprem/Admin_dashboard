@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const ProductRow = React.memo(({ product, onView }) => {
